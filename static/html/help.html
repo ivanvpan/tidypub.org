@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta name="google-site-verification" content="n9TeaueR7ic6dq5EvIReDDDwicEepZ6bDNsBpBcmnP8" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16433974-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<link rel="stylesheet" type="text/css" href="/static/css/reset-min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/post.css" />
+
+<style type="text/css">
+td {
+    vertical-align: top;
+}
+
+body {
+	margin: 15px 30px;
+}
+
+#help-content {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#help-table ul, 
+#help-table ol, 
+#help-table li, 
+#help-table pre, 
+#help-table code, 
+#help-table blockquote {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#help-table {
+	border-collapse: collapse;
+	width: 640px;
+}
+
+#help-table td {
+	border: solid 1px #aaa;
+	padding: 0.3em 1em;
+}
+
+#help-table thead{
+	background-color: #ccc;
+}
+</style>
+
+<title> Formatting Help - tidypub </title>
+</head>
+
+<body>
+	<div id="help-content">
+    <table id="help-table">
+		<thead>
+        <tr>
+            <td>You type</td>
+            <td>You get</td>
+        </tr>
+		</thead>
+        <tr>
+            <td>*italic*</td>
+            <td><em>italic</em></td>
+        </tr>
+        <tr>
+            <td>**bold**</td>
+            <td><strong>bold</strong></td>
+        </tr>
+        <tr>
+            <td># Header</td>
+            <td><strong>Header</strong></td>
+        </tr>
+        <tr>
+            <td>http://example.com</td>
+            <td><a href="http://example.com">http://example.com</a></td>
+        </tr>
+        <tr>
+            <td>[A custom link](http://example.com)</td>
+            <td><a href="http://example.com">A custom link</a></td>
+        </tr>
+        <tr>
+            <td>&gt; block quote</td>
+            <td><blockquote>block quote</blockquote></td>
+        </tr>
+        <tr>
+            <td>
+                * item 1<br>
+                * item 2
+            </td>
+            <td>
+                <ul>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Lines that start with four or more spaces are treated as code.<br>
+    <span style="background-color: #999">&ensp;&ensp;&ensp;&ensp;</span>if 2 + 4 == 5:<br>
+    <span style="background-color: #999">&ensp;&ensp;&ensp;&ensp;</span><span style="background-color: #999">&ensp;&ensp;&ensp;&ensp;</span> 
+	print 'It works!'
+            </td>
+            <td>
+                Lines that start with four or more spaces are treated as code.<br>
+                <pre style="margin-left: 0">
+<code style="margin-left: 0">    if 2 + 4 == 5:
+        print 'It works!'</code>
+                </pre>
+            </td>
+        </tr>
+    </table>
+	<p style="font-size: 12px; color: #666"> <br>Use responsibly, for the sake of your text. </p>
+
+</div>
+</body>
+</html>

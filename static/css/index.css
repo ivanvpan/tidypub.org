@@ -1,0 +1,179 @@
+body {
+    background-color: #FCFCFC;
+    color: #111;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+input, textarea {
+    border: 1px solid #999;
+}
+
+a:visited, a:link {
+    color: #111;
+}
+
+#content {
+    background: #eee;
+    border: 1px solid #ccc;
+    width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#content > .body {
+    padding: 30px;
+}
+
+/* HEADER */
+
+#header {
+    margin-bottom: 70px;
+    margin-top: 15px;
+}
+
+#header .body {
+    background-color: #eee;
+    border-bottom: 1px solid #aaa;
+    border-top: 1px solid #aaa;
+    padding: 8px;
+}
+
+#logo {
+    margin-top: 2px;
+    position: absolute;
+    top: 23px;
+    left: 10px;
+}
+
+#intro {
+    color: #777;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 26px;
+    text-align: center;
+    width: 100%;
+}
+
+#intro a:visited,
+#intro a:link {
+    color: #666;
+}
+
+
+/* FORMS */
+
+
+a#show_help:link,
+a#show_help:visited {
+    color: #888;
+    display: block;
+    font-size: 12px;
+    float: right;
+    line-height: 25px;
+    margin-top: -20px;
+    text-decoration: none;
+}
+a#show_help:hover {
+    text-decoration: underline;
+}
+
+form {
+}
+
+form div.body {
+    padding: 0px;
+}
+
+label {
+    display: none;
+    color: #555;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+#some_in {
+    display: none;
+}
+
+#title_in,
+#text_in {
+    color: #444;
+    font-family: times new roman, times, serif;
+    font-size: 18px;
+    padding: 0px;
+}
+
+#title_in:focus,
+#text_in:focus {
+    border: 1px solid #777;
+}
+
+#title_in {
+    height: 28px;
+    width: 385px;
+    padding: 0 0 0 5px;
+}
+
+#title_in.unfilled {
+    color: #999;
+    font-style: italic;
+}
+
+#text_in {
+    height: 275px;
+    margin-bottom: 20px;
+    padding: 0 5px;
+    width: 510px;
+}
+
+#submit_in {
+    background-color: #CCCCCC;
+    color: #5B5B5B;
+    float: right;
+    font-family: Georgia;
+    font-size: 18px;
+    height: 30px;
+    width: 100px;
+}
+
+.embedded_name {
+    font-style: normal;
+}
+
+#footer {
+    font-family: helvetica, arial, sans-serif;
+    font-size: 14px;
+    height: 38px;
+    line-height: 38px;
+    width: 550px;
+    margin: 0 auto;
+}
+
+#footer img {
+    vertical-align: middle;
+}
+
+#footer a:link, #footer a:visited {
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+#footer ul {
+    list-style: none;
+    display: inline;
+    float: right;
+}
+
+#footer li {
+    display: inline;
+    margin-left: 20px;
+}
+

@@ -1,0 +1,25 @@
+#body {
+    font-size: 12pt;
+}
+
+#page {
+    width: 100%;
+}
+
+#footer ul{
+    display: none;
+}
+
+#title {
+    font-size: 14pt;
+    margin-top: 1em;
+}
+
+#content {
+    font-size: 12pt;
+ 
+}
+
+#header {
+    display: none;
+}

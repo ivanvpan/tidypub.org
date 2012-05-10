@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta name="google-site-verification" content="n9TeaueR7ic6dq5EvIReDDDwicEepZ6bDNsBpBcmnP8" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16433974-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<link rel="stylesheet" type="text/css" href="static/css/reset-min.css" />
+<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+	function openhelp(url) {
+		newwindow=window.open(url,'Formatting Help','height=560,width=700');
+		if (window.focus) {newwindow.focus()}
+		return false;
+	}
+
+    $(document).ready(function() {
+        var MAX_TEXT_LENGTH = 32767;
+        $('#text_in').focus();
+        $('#title_in').val('Title (optional)');
+        $('#title_in').focus(function() {
+            if ($(this).hasClass('unfilled')) {
+                $(this).removeClass('unfilled');
+                $(this).val('');
+            }
+        });
+        
+        $('#submit_in').click(function() {
+            var text = $('#text_in').val();
+            if (text.length < 1)
+                alert("Please enter some text first.");
+            else if (text.length > MAX_TEXT_LENGTH)
+                alert("You text is "
+                        + (text.length - MAX_TEXT_LENGTH)
+                        + " characters over the limit. Please shorten it and try again.");
+            else {
+                if ($('#title_in').hasClass('unfilled'))
+                    $('#title_in').val('');
+                $('#main_form').submit();
+            }
+            return false;
+        });
+    });
+</script>
+
+<title>tidypub - publish classy</title>
+
+</head>
+
+<body>
+
+    <div id="header">
+    <div class="body">
+        <div id="logo"><a href="/"><img src="static/images/logo.png"/></a></div>
+        
+        <div id="intro">
+            Publish online any text in a
+            readable and easy to share form. Take a look at an
+            <a href="/{{sample_id}}">example</a>.
+        </div>
+    </div>
+    </div>
+
+<div id="content">
+<div class="body">
+    <a id="show_help" href="/static/html/help.html" onclick="return openhelp('/static/html/help.html')">Formatting Help</a>
+
+    <form id="main_form" name="main_form" action="/" method="post" autocomplete="off">
+    <div class="body">
+        {% csrf_token %}
+        <label>Your text</label>
+        <textarea id="text_in" type="text" name="text"  cols="40" rows="16"></textarea>
+        <label>Title (optional)</label>
+        <input id="some_in" name="some_in" type="text" value=""/>
+        <input class="unfilled" id="title_in" type="text" name="title" value="Title (optional)" maxlength="128" size="64" />
+        <input id="submit_in" type="button" value="Publish"/>
+    </div>
+    </form>
+
+</div>
+</div>
+
+<div id="footer">
+    <ul>
+        <li><a href="/donate">donate</a></li>
+        <li><a href="/terms">terms</a></li>
+        <li><a href="/contact">contact</a></li>
+        <!--<li><a href="/">contact</a></li>-->
+    </ul>
+    <!--<a href="http://www.twitter.com/tidypub">
+        <img src="http://twitter-badges.s3.amazonaws.com/t_small-a.png" alt="Follow tidypub on Twitter"/>
+    </a>-->
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var feedback_widget_options = {};
+
+  feedback_widget_options.display = "overlay";  
+  feedback_widget_options.company = "tidypub";
+  feedback_widget_options.placement = "right";
+  feedback_widget_options.color = "#888";
+  feedback_widget_options.style = "idea";
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
+
+</body>
+</html>

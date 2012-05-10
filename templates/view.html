@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+
+<head>
+<meta name="ROBOTS" content="NOINDEX"/>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16433974-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/reset-min.css" />
+    <!--<script type="text/javascript" src="/static/js/hyphenate.js"></script>-->
+    <link rel="stylesheet" type="text/css" media="all" href="/static/css/post.css"/>
+    <link rel="stylesheet" type="text/css" media="print" href="/static/css/print.css"/>
+
+    <title>    
+    {% if title %}
+        {{title}} - tidypub
+    {% else %}
+        Untitled - tidypub
+    {% endif %}
+    </title>
+
+</head>
+
+
+<body>
+<div id="page">
+    {% if new_post %}
+        <div id="message">
+        <div class="body">
+            <div id="message_text">
+            Great! Now, just copy
+            <a href="http://tidypub.org/{{id}}">http://tidypub.org/{{id}}</a>
+            and share.
+            </div>
+        </div>
+        </div>
+    {% endif %}    
+    
+    <div id="content">
+        {% if title %}
+            <div id="title">
+            {{title}}
+            </div>
+        {% endif %}
+    
+        <div id="the_text" class="hyphenate">
+        {{text|safe}}
+        </div>
+    
+    </div>
+    <div id="footer">
+        <ul>
+            <li><a href="/donate">donate</a></li>
+            <li><a href="/terms">terms</a></li>
+            <li><a href="/contact">contact</a></li>
+            <!--<li><a href="/">contact</a></li>-->
+        </ul>
+        <span class="logo"><a href="/"><img src="static/images/logo.png"/></a>&nbsp;</span>
+    </div>
+</div>
+
+</body>
+</html>
